@@ -1,0 +1,41 @@
+/* Allows printing in color and with background images */
+@media print {
+    body, div[class="portrait"], div[class="landscape"] {
+        margin: 0;
+        box-shadow: 0;
+        -webkit-print-color-adjust: exact !important;
+    }
+}
+
+/* Removes date, URL, etc from header and footer of print page */
+@page { size: auto;  margin: 0; } 
+
+body {
+  background: rgb(204,204,204); 
+}
+
+div[class="portrait"], div[class="landscape"] {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  
+}
+
+div[class="portrait"] {  
+  width: 21cm;
+  height: 29.7cm; 
+}
+
+div[class="landscape"] {  
+  width: 29.7cm;
+  height: 21cm;
+}
+
+.standard {
+  padding: 2.5cm;
+}
+
+.narrow {
+  padding: 1.5cm;
+}
